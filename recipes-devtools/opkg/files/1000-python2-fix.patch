@@ -1,0 +1,290 @@
+Index: opkg-0.3.0/scripts/test-branch.py
+===================================================================
+--- opkg-0.3.0.orig/scripts/test-branch.py
++++ opkg-0.3.0/scripts/test-branch.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ #	test-branch.py: 'make check' on each commit on a branch
+ #
+Index: opkg-0.3.0/tests/core/01_install.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/01_install.py
++++ opkg-0.3.0/tests/core/01_install.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package and check that it is listed as installed. Then remove the
+ # package and check that it is no longer listed as installed.
+Index: opkg-0.3.0/tests/core/02_file.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/02_file.py
++++ opkg-0.3.0/tests/core/02_file.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package containing a file and check that the file is created. Remove
+ # the package and check that the file is removed.
+Index: opkg-0.3.0/tests/core/03_upgrade.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/03_upgrade.py
++++ opkg-0.3.0/tests/core/03_upgrade.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package and then make available a new version of the same package.
+ # Upgrade and check that the new version is installed and the old version
+Index: opkg-0.3.0/tests/core/04_upgrade_file.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/04_upgrade_file.py
++++ opkg-0.3.0/tests/core/04_upgrade_file.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package and then make available a new version of the same package.
+ # This is similar to test 3 but we put a file "test1" in version 1.0 of the
+Index: opkg-0.3.0/tests/core/05_downgrade.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/05_downgrade.py
++++ opkg-0.3.0/tests/core/05_downgrade.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Make available two versions of the same package and install it. Check that the
+ # latest version is chosen out of the two available. Then explicitly install the
+Index: opkg-0.3.0/tests/core/06_dependency.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/06_dependency.py
++++ opkg-0.3.0/tests/core/06_dependency.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package 'a' which depends on a second package 'b'. Check that both
+ # are installed, that package 'a' does not report as automatically installed but
+Index: opkg-0.3.0/tests/core/07_hold_upgrade.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/07_hold_upgrade.py
++++ opkg-0.3.0/tests/core/07_hold_upgrade.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package and mark it as on hold. Make an updated version available
+ # and upgrade. Check that the new version is not installed and the old version
+Index: opkg-0.3.0/tests/core/08_hold_by_hand.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/08_hold_by_hand.py
++++ opkg-0.3.0/tests/core/08_hold_by_hand.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Within the function `pkg_hash_fetch_best_installation_candidate`, we wish to
+ # test the condition where `(held_pkg && good_pkg_by_name) == true`. So install
+Index: opkg-0.3.0/tests/core/09_hold_depends.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/09_hold_depends.py
++++ opkg-0.3.0/tests/core/09_hold_depends.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Mark an installed package a-1.0 as on hold, make available a-2.0 depended on
+ # by z. Check that z refuses to install due to a-1.0 being held.
+Index: opkg-0.3.0/tests/core/10_virtual_conflicts_first.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/10_virtual_conflicts_first.py
++++ opkg-0.3.0/tests/core/10_virtual_conflicts_first.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package 'x' which PROVIDES and CONFLICTS 'v', indicating that 'v' is
+ # a virtual package and no other provider of this virtual package should be
+Index: opkg-0.3.0/tests/core/11_virtual_conflicts_second.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/11_virtual_conflicts_second.py
++++ opkg-0.3.0/tests/core/11_virtual_conflicts_second.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package 'x' which PROVIDES 'v'. Then try to install 'y' which
+ # PROVIDES and CONFLICTS 'v', indicating that no other provider of the virtual
+Index: opkg-0.3.0/tests/core/12_virtual_no_conflicts.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/12_virtual_no_conflicts.py
++++ opkg-0.3.0/tests/core/12_virtual_no_conflicts.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package 'x' which PROVIDES 'v' and ensure that we can install
+ # another package 'y' which also PROVIDES 'v'.
+Index: opkg-0.3.0/tests/core/13_virtual_upgrade.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/13_virtual_upgrade.py
++++ opkg-0.3.0/tests/core/13_virtual_upgrade.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install version 1.0 of a package 'x' which PROVIDES and CONFLICTS 'v', then
+ # try to upgrade it.
+Index: opkg-0.3.0/tests/core/14_upgrade_by_uri.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/14_upgrade_by_uri.py
++++ opkg-0.3.0/tests/core/14_upgrade_by_uri.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package and then make available a new version of the same package.
+ # Install this second version of the package by URI to the package file rather
+Index: opkg-0.3.0/tests/core/15_reinstall_by_uri.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/15_reinstall_by_uri.py
++++ opkg-0.3.0/tests/core/15_reinstall_by_uri.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ #
+ 
+Index: opkg-0.3.0/tests/core/16_upgrade_dependency.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/16_upgrade_dependency.py
++++ opkg-0.3.0/tests/core/16_upgrade_dependency.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package 'a' at version 1.0. Make available 'a' at version 2.0 with
+ # dependency on 'b', and make available 'b'. Do upgrade and ensure that 'b' in
+Index: opkg-0.3.0/tests/core/17_upgrade_conflicts.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/17_upgrade_conflicts.py
++++ opkg-0.3.0/tests/core/17_upgrade_conflicts.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package A at version V. Install a package B, which conflicts
+ # with a version of A older than V. Make available A at a version newer
+Index: opkg-0.3.0/tests/core/18_upgrade_recommends.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/18_upgrade_recommends.py
++++ opkg-0.3.0/tests/core/18_upgrade_recommends.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Install a package B, which recommends package A. Verify that A installs
+ # automatically and gets flagged as auto-installed. Make a newer version
+Index: opkg-0.3.0/tests/core/19_no_recommends.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/19_no_recommends.py
++++ opkg-0.3.0/tests/core/19_no_recommends.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Create packages 'a', 'b' which recommends 'a' and 'c' which depends on 'a'.
+ # Install 'b' with '--no-install-recommends' and ensure 'a' is not installed.
+Index: opkg-0.3.0/tests/core/20_exclude.py
+===================================================================
+--- opkg-0.3.0.orig/tests/core/20_exclude.py
++++ opkg-0.3.0/tests/core/20_exclude.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Create packages 'a', 'b' which recommends 'a' and 'c' which depends on 'a'.
+ # Install 'b' with '--add-exclude a' and ensure 'b' is installed but 'a' is not.
+Index: opkg-0.3.0/tests/regress/issue121.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue121.py
++++ opkg-0.3.0/tests/regress/issue121.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Reported by KirGeNe, Feb 6, 2014
+ # Test case modified by Paul Barker
+Index: opkg-0.3.0/tests/regress/issue124.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue124.py
++++ opkg-0.3.0/tests/regress/issue124.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Issue 124, reported by muusclaus
+ #
+Index: opkg-0.3.0/tests/regress/issue124a.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue124a.py
++++ opkg-0.3.0/tests/regress/issue124a.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Issue 124, reported by muusclaus
+ #
+Index: opkg-0.3.0/tests/regress/issue127.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue127.py
++++ opkg-0.3.0/tests/regress/issue127.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Issue 127 reported by muusclaus
+ #
+Index: opkg-0.3.0/tests/regress/issue152.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue152.py
++++ opkg-0.3.0/tests/regress/issue152.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Issue 152
+ #
+Index: opkg-0.3.0/tests/regress/issue79.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue79.py
++++ opkg-0.3.0/tests/regress/issue79.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ #
+ # Reporter: pixdamix
+ #
+Index: opkg-0.3.0/tests/regress/issue89.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue89.py
++++ opkg-0.3.0/tests/regress/issue89.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Reported by ccospel, Jan 27, 2012
+ #
+Index: opkg-0.3.0/tests/regress/issue91.py
+===================================================================
+--- opkg-0.3.0.orig/tests/regress/issue91.py
++++ opkg-0.3.0/tests/regress/issue91.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Reported by boris.bischoff, Aug 17, 2012
+ #

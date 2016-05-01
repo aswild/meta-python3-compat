@@ -1,0 +1,80 @@
+Index: git/makePackage
+===================================================================
+--- git.orig/makePackage
++++ git/makePackage
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ # The general algorithm this program follows goes like this:
+ #   Run tar to extract control from control.tar.gz from the package.
+Index: git/opkg-compare-indexes
+===================================================================
+--- git.orig/opkg-compare-indexes
++++ git/opkg-compare-indexes
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import sys, os
+ from glob import glob
+Index: git/opkg-list-fields
+===================================================================
+--- git.orig/opkg-list-fields
++++ git/opkg-list-fields
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import sys, opkg
+ 
+Index: git/opkg-make-index
+===================================================================
+--- git.orig/opkg-make-index
++++ git/opkg-make-index
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import sys, os, posixpath
+ import subprocess
+Index: git/opkg-show-deps
+===================================================================
+--- git.orig/opkg-show-deps
++++ git/opkg-show-deps
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import sys, os, posixpath
+ from glob import glob
+Index: git/opkg-unbuild
+===================================================================
+--- git.orig/opkg-unbuild
++++ git/opkg-unbuild
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import sys, os, re
+ 
+Index: git/opkg-update-index
+===================================================================
+--- git.orig/opkg-update-index
++++ git/opkg-update-index
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import sys, os
+ from glob import glob
+Index: git/opkg.py
+===================================================================
+--- git.orig/opkg.py
++++ git/opkg.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #   Copyright (C) 2001 Alexander S. Guy <a7r@andern.org>
+ #                      Andern Research Labs
+ #
