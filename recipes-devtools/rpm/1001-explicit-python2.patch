@@ -1,0 +1,150 @@
+Index: rpm-5.4.15/beecrypt/python/test/unittest.py
+===================================================================
+--- rpm-5.4.15.orig/beecrypt/python/test/unittest.py
++++ rpm-5.4.15/beecrypt/python/test/unittest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ '''
+ Python unit testing framework, based on Erich Gamma's JUnit and Kent Beck's
+ Smalltalk testing framework.
+Index: rpm-5.4.15/python/mpw/test/unittest.py
+===================================================================
+--- rpm-5.4.15.orig/python/mpw/test/unittest.py
++++ rpm-5.4.15/python/mpw/test/unittest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ '''
+ Python unit testing framework, based on Erich Gamma's JUnit and Kent Beck's
+ Smalltalk testing framework.
+Index: rpm-5.4.15/python/rpm/transaction.py
+===================================================================
+--- rpm-5.4.15.orig/python/rpm/transaction.py
++++ rpm-5.4.15/python/rpm/transaction.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ import rpm
+ from rpm._rpm import ts as _rpmts
+Index: rpm-5.4.15/python/test/dsMerge.py
+===================================================================
+--- rpm-5.4.15.orig/python/test/dsMerge.py
++++ rpm-5.4.15/python/test/dsMerge.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ import rpm
+ 
+ ts = rpm.ts()
+Index: rpm-5.4.15/python/test/dscmp
+===================================================================
+--- rpm-5.4.15.orig/python/test/dscmp
++++ rpm-5.4.15/python/test/dscmp
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ import rpm
+ print cmp(("0","2.6.3","241"),("0","2.6.3","242"))
+ print cmp(("0","2.6.3","242"),("0","2.6.3","241"))
+Index: rpm-5.4.15/python/test/psTest.py
+===================================================================
+--- rpm-5.4.15.orig/python/test/psTest.py
++++ rpm-5.4.15/python/test/psTest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ import rpm
+ 
+Index: rpm-5.4.15/python/test/test_rpm.py
+===================================================================
+--- rpm-5.4.15.orig/python/test/test_rpm.py
++++ rpm-5.4.15/python/test/test_rpm.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # -*- coding: utf-8 -*-
+ #
+ # Copyright (c) 2009 Per Øyvind Karlsen <peroyvind@mandriva.org>
+Index: rpm-5.4.15/python/test/testhdr
+===================================================================
+--- rpm-5.4.15.orig/python/test/testhdr
++++ rpm-5.4.15/python/test/testhdr
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ import rpm
+ 
+Index: rpm-5.4.15/python/test/testit
+===================================================================
+--- rpm-5.4.15.orig/python/test/testit
++++ rpm-5.4.15/python/test/testit
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ import rpm
+ import os
+Index: rpm-5.4.15/python/test/testmi
+===================================================================
+--- rpm-5.4.15.orig/python/test/testmi
++++ rpm-5.4.15/python/test/testmi
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ import rpm
+ 
+ def printresult (name, mi):
+Index: rpm-5.4.15/python/test/testrollback.py
+===================================================================
+--- rpm-5.4.15.orig/python/test/testrollback.py
++++ rpm-5.4.15/python/test/testrollback.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ 
+ import rpm
+Index: rpm-5.4.15/scripts/pythoneggs.py
+===================================================================
+--- rpm-5.4.15.orig/scripts/pythoneggs.py
++++ rpm-5.4.15/scripts/pythoneggs.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # -*- coding: utf-8 -*-
+ #
+ # Copyright 2010 Per Øyvind Karlsen <peroyvind@mandriva.org>
+Index: rpm-5.4.15/scripts/symclash.py
+===================================================================
+--- rpm-5.4.15.orig/scripts/symclash.py
++++ rpm-5.4.15/scripts/symclash.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ 
+ import os
+ import glob
+Index: rpm-5.4.15/syck/ext/python/XmlYaml/convertyaml_map.py
+===================================================================
+--- rpm-5.4.15.orig/syck/ext/python/XmlYaml/convertyaml_map.py
++++ rpm-5.4.15/syck/ext/python/XmlYaml/convertyaml_map.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ """
+ Sample code to convert YAML to XML and XML to YAML using a canonical
+ form.
+Index: rpm-5.4.15/syck/ext/python/XmlYaml/convertyaml_seq.py
+===================================================================
+--- rpm-5.4.15.orig/syck/ext/python/XmlYaml/convertyaml_seq.py
++++ rpm-5.4.15/syck/ext/python/XmlYaml/convertyaml_seq.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ """
+ Sample code to convert YAML to XML and XML to YAML using a canonical
+ form.
